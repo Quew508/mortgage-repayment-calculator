@@ -60,7 +60,8 @@ body {
     margin-bottom: 5px;
   }
 }
-.mortgage-calculator-container .mortgage-calculator label {
+.mortgage-calculator-container .mortgage-calculator label,
+.mortgage-calculator-container .mortgage-calculator .select-title {
   display: block;
   color: hsl(200, 26%, 54%);
   margin-bottom: 8px;
