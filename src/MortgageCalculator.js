@@ -132,8 +132,8 @@ const MortgageCalculator = () => {
     return (
         <section className='mortgage-calculator-container'>
           <div className="mortgage-calculator">
-              <h2 role="heading">Mortgage Calculator</h2>
-              <span role="clearall" className='clear-all' onClick={clearAll}>
+              <h1>Mortgage Calculator</h1>
+              <span role="button" className='clear-all' onClick={clearAll}>
                 Clear All
               </span>
               <form onSubmit={calculateRepayment}>
@@ -147,7 +147,7 @@ const MortgageCalculator = () => {
                   activeField={activeField}
                   setActiveField={setActiveField}
                 />
-                <div role="formrow" className='form-row'>
+                <section className='form-row'>
                   <TextInput 
                     type="text"
                     label="Mortgage Term"
@@ -168,8 +168,8 @@ const MortgageCalculator = () => {
                     activeField={activeField}
                     setActiveField={setActiveField}
                   />
-                </div>
-                <div role="mortgageselect" className='mortgage-select'>
+                </section>
+                <section className='mortgage-select'>
                   <div className="select-title">Mortgage Type</div>
                   <SelectInput 
                     id="repayment"
@@ -188,7 +188,7 @@ const MortgageCalculator = () => {
                     handleChange={handleChange}
                   />
                   {errors.mortgageType && <p className="error-text">{errors.mortgageType}</p>}
-                </div>
+                </section>
                 <Button
                   type="submit"
                   hasImage={true}
@@ -198,7 +198,7 @@ const MortgageCalculator = () => {
               </form>
         
             </div>
-            <div role="results" className="results-container">
+            <div role="region" className="results-container">
                 {showResults ? (
                     <div className="results">
                         <h3>Your results</h3>

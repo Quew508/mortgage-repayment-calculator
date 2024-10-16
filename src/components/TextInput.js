@@ -4,7 +4,7 @@ const TextInput = ({ type, label, name, value, onChange, error, activeField, set
     const formattedValue = name === 'mortgageAmount' ? Number(value).toLocaleString() : value;
 
     return (
-        <div role="textinput" className={`form-input-container ${name}`}>
+        <div role="region" className={`form-input-container ${name}`}>
             <label htmlFor={name}>{label}</label>
             <div className={`form-input ${name}-input ${error ? 'input-error': ''} ${activeField === name ? 'field-active' : ''}`}>
                 <input
